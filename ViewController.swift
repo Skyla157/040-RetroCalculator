@@ -58,6 +58,15 @@ class ViewController: UIViewController {
         outputLabel.text = runningNum
     }
 
+    @IBAction func onClearPress(sender: AnyObject) {
+        runningNum = ""
+        leftValStr = ""
+        rightValStr = ""
+        result = ""
+        outputLabel.text = "0"
+        currentOperation = Operation.Empty
+    }
+    
     @IBAction func onDividePress(sender: AnyObject) {
         processOperation(Operation.Divide)
     }
